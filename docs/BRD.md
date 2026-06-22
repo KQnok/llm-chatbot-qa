@@ -1,6 +1,6 @@
 1. Executive Summary
 A digital banking platform operates LLM chatbot serving customer support.
-The support chatbot handles [X] types of customer requests daily.
+The support chatbot handles 77 categories of customer requests (Banking77 dataset, 3,080 queries).
 Currently response quality is not evaluated.
 This results in agents being overwhelmed by escalations that could be avoided.
 
@@ -15,7 +15,7 @@ Expected outcome: achieve chatbot resolution rate of 70%+ in line with industry 
    in line with finance industry benchmark.
 
 2. Identify intent categories where chatbot resolution rate falls 
-   below 30%, enabling targeted prompt optimization for 
+   below 50-60%, enabling targeted prompt optimization for 
    bottom-performing categories.
 
 3. Enable data-driven decision making for chatbot improvement 
@@ -24,20 +24,20 @@ Expected outcome: achieve chatbot resolution rate of 70%+ in line with industry 
 
 3. Scope (In Scope / Out of Scope)
 In scope:
-- gathering LLM chatbot logs;
+- generating and evaluating synthetic chatbot responses on dataset;
 - evaluating responses using LLM-as-judge across 3 quality metrics;
 - creating a visualization dashboard with quality scores by intent category.
 
 Out of Scope:
 - development of prompt improvement solutions;
 - processing real customer personal data;
-- deployment of the evaluation system to production environment(it's only research tool).
+- deployment of the evaluation system to production environment.
 
 4. Stakeholders
 Head of Customer Support | Business Owner | Knows where the bot breaks down to reduce the load on the agents |
 Chatbot Development Team | Implementer | To have clear data where the bot is not working well to improve prompt |
 QA Team | The user | Automated assessment tool instead of manual verification |
-Compliance Officer | Supervision | To ensure that the bot does not provide incorrect financial information |
+Compliance Officer | Compliance Reviewer | To ensure that the bot does not provide incorrect financial information |
 
 
 5. Functional Requirements
@@ -48,8 +48,17 @@ The system shall pass query and generated response to LLM-as-judge for evaluatio
 The system shall save evaluation result in a table
 The system shall aggregate results by category
 The system shall create a dashboard with quality scores by intent category
+The system shall allow filtering dashboard by intent category
+The system shall display category score compared to overall mean
+The system shall highlight selected category on dashboard
+The system shall export evaluation results in JSON format
+The system shall display error notification when no data is available for export
+The system shall log each evaluation result to local CSV/JSON file for QA analysis
+The system shall calculate and display hallucination rate by intent category
+
 
 6. Non-Functional Requirements
+
 The system shall achieve LLM-judge consistency rate of 90%+ across repeated evaluations of identical inputs
 The system shall evaluate each query response within defined quality thresholds: relevance score, correctness score, escalation flag
 The dashboard shall display quality metrics in a format interpretable by non-technical QA team members
