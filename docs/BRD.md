@@ -55,3 +55,12 @@ The system shall evaluate each query response within defined quality thresholds:
 The dashboard shall display quality metrics in a format interpretable by non-technical QA team members
 
 7. Assumptions & Constraints
+Assumptions:
+Banking77 dataset is representative of real banking queries
+Gemini API is accurate enough for the role of judge
+Industry benchmarks used as targets may not accurately reflect specific operational context
+
+Constraints:
+The free tier Gemini API is limited in the number of requests
+Real customer data is not available
+The dataset is not big enough for stress-testing on big data
