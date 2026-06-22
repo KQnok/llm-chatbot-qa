@@ -50,5 +50,8 @@ The system shall aggregate results by category
 The system shall create a dashboard with quality scores by intent category
 
 6. Non-Functional Requirements
+The system shall achieve LLM-judge consistency rate of 90%+ across repeated evaluations of identical inputs
+The system shall evaluate each query response within defined quality thresholds: relevance score, correctness score, escalation flag
+The dashboard shall display quality metrics in a format interpretable by non-technical QA team members
 
 7. Assumptions & Constraints
