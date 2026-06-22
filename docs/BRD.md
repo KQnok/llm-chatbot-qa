@@ -23,10 +23,31 @@ Expected outcome: achieve chatbot resolution rate of 70%+ in line with industry 
    reducing manual QA effort.
 
 3. Scope (In Scope / Out of Scope)
+In scope:
+- gathering LLM chatbot logs;
+- evaluating responses using LLM-as-judge across 3 quality metrics;
+- creating a visualization dashboard with quality scores by intent category.
+
+Out of Scope:
+- development of prompt improvement solutions;
+- processing real customer personal data;
+- deployment of the evaluation system to production environment(it's only research tool).
 
 4. Stakeholders
+Head of Customer Support | Business Owner | Knows where the bot breaks down to reduce the load on the agents |
+Chatbot Development Team | Implementer | To have clear data where the bot is not working well to improve prompt |
+QA Team | The user | Automated assessment tool instead of manual verification |
+Compliance Officer | Supervision | To ensure that the bot does not provide incorrect financial information |
+
 
 5. Functional Requirements
+
+The system shall extract customer query from dataset
+The system shall generate chatbot response for each customer query using LLM
+The system shall pass query and generated response to LLM-as-judge for evaluation
+The system shall save evaluation result in a table
+The system shall aggregate results by category
+The system shall create a dashboard with quality scores by intent category
 
 6. Non-Functional Requirements
 
