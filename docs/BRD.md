@@ -10,6 +10,18 @@ Expected outcome: achieve chatbot resolution rate of 70%+ in line with industry 
 
 2. Business Objectives
 
+1. Establish measurable quality baseline for chatbot performance 
+   across 77 intent categories, targeting resolution rate of 75% 
+   in line with finance industry benchmark.
+
+2. Identify intent categories where chatbot resolution rate falls 
+   below 30%, enabling targeted prompt optimization for 
+   bottom-performing categories.
+
+3. Enable data-driven decision making for chatbot improvement 
+   by providing automated quality scores across 3 metrics, 
+   reducing manual QA effort.
+
 3. Scope (In Scope / Out of Scope)
 
 4. Stakeholders
